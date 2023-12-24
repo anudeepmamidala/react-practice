@@ -1,8 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Array = () => {
     const [data,setData]=useState([])
     const [item,setItem]=useState('')
+    
+    useEffect(()=>{
+        console.log("nigga")
+    })
+    useEffect(()=>{
+        console.log("nigga1")
+
+    },[])
+    useEffect(()=>{
+        console.log("nigga3")
+
+    },[item])
     
     const add=(item)=>{
         setData([...data,item])
